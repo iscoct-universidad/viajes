@@ -1,0 +1,14 @@
+#imagenes {
+    float: right;
+    display: grid;
+    grid-template-rows: auto auto;
+    padding-right: 10px;
+}
+
+p.ciudad {
+    text-align: center;
+}
+
+#descripcion {
+    padding: 7px;
+}

@@ -1,0 +1,9 @@
+#navegacionLateral {
+    list-style-type: none;
+    height: inherit;
+    margin-right: 10px;
+}
+
+#listaLateral {
+    list-style-type: none;
+}

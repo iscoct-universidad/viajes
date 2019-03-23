@@ -1,0 +1,5 @@
+.borde {
+    border-style: solid;
+    border-color: darkslategrey;
+    border-radius: 30px;
+}

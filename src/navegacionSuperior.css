@@ -1,0 +1,8 @@
+#menuCabecera {
+    list-style-type: none;
+}
+
+.elementoMenu {
+    float: left;
+    padding: 10px;
+}

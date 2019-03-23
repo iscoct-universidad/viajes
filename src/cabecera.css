@@ -1,0 +1,16 @@
+#imagenAvion {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    float: left;
+    padding: 30px;
+}
+
+#cabecera {
+    height: 250px;
+    background-image: linear-gradient(to bottom right, red, yellow);
+}
+
+#cabeceraPrincipal {
+    padding: 10px;
+}
