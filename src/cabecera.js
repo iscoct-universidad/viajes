@@ -1,6 +1,6 @@
 import React from 'react';
-import './cabecera.css';
-import './comun.css';
+import './css/cabecera.css';
+import './css/comun.css';
 import avion from './img/avion.jpg';
 
 export default class Cabecera extends React.Component {

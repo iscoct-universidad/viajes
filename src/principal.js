@@ -1,7 +1,5 @@
 import React from 'react';
-import NavegacionLateral from './navegacionLateral';
-import Main from './main';
-import './principal.css';
+import './css/principal.css';
 
 export default class Principal extends React.Component {
 	constructor(props) {
@@ -17,7 +15,9 @@ export default class Principal extends React.Component {
 	render() {
 		return(
 			<section id={ this.state.id }>
-				{ this.state.navegacionLateral }
+				<aside className="borde" id="navegacionLateral">
+					{ this.state.navegacionLateral }
+				</aside>
 				{ this.state.main }
 			</section>
 		);

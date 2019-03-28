@@ -3,37 +3,19 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import Pie from './pie';
 import Cabecera from './cabecera';
-import NavegacionSuperior from './navegacionSuperior';
-import NavegacionLateral from './navegacionLateral';
+import Navegacion from './navegacion';
 import Main from './main';
 import Principal from './principal';
-import Evento from './evento';
-import roma from './img/roma.jpg';
-import londres from './img/londres.jpg';
-import paris from './img/paris.jpeg';
+import './css/navegacionLateral.css';
+import './css/navegacionSuperior.css';
 
 class Pagina extends React.Component {
 	constructor(props) {
 		super(props);
 		
-		const navegacionSuperior = <NavegacionSuperior />;
-		const navegacionLateral = <NavegacionLateral />;
-	
-		const tuplas = [ { enlace: "https://www.google.es", imagenFuente: paris, ciudad: "París" },
-			{ enlace: "https://www.google.es", imagenFuente: roma, ciudad: "Roma" },
-			{ enlace: "https://www.google.es", imagenFuente: londres, ciudad: "Londres" } ];
-			
-		let eventos = new Array();
-
-		tuplas.forEach( (tupla) => {
-			console.log("Enlace: " + tupla.enlace);
-			console.log("Ciudad: " + tupla.ciudad);
-			
-			eventos.push(<Evento enlace={tupla.enlace} className="imagenes"
-				imagenFuente={tupla.imagenFuente} ciudad={tupla.ciudad} />);
-		});
-		
-		const main = <Main className="borde" id="conjuntoEventos" eventos={eventos}/>;
+		const navegacionSuperior = <Navegacion idLista="menuCabecera" className="elementoMenu" tipo="Superior"/>
+		const navegacionLateral = <Navegacion idLista="listaLateral" className="elementoLateral" tipo="Lateral"/>
+		const main = <Main className="borde" id="conjuntoEventos" />;
 		
 		this.state = {
 			cabecera: <Cabecera className="borde" id="cabecera" navegacionSuperior={navegacionSuperior}/>,

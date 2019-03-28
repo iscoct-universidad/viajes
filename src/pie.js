@@ -1,6 +1,6 @@
 import React from 'react';
-import './pie.css';
-import './comun.css';
+import './css/pie.css';
+import './css/comun.css';
 
 export default class Pie extends React.Component {
 	constructor(props) {

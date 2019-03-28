@@ -1,5 +1,5 @@
 import React from 'react';
-import './evento.css';
+import './css/evento.css';
 
 export default class Evento extends React.Component {
 	constructor(props) {
@@ -15,7 +15,7 @@ export default class Evento extends React.Component {
 	
 	render() {
 		return(
-			<div><a href={ this.state.enlace }><img class={ this.state.className } src={ this.state.imagenFuente } alt={ this.state.ciudad }/><p class="ciudad">{ this.state.ciudad }</p></a></div>
+			<div><a href={ this.state.enlace }><img className={ this.state.className } src={require(`${this.state.imagenFuente}`)} alt={ this.state.ciudad }/><p className="ciudad">{ this.state.ciudad }</p></a></div>
         );
 	}
 }

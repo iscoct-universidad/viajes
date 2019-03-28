@@ -7,13 +7,26 @@ export default class Navegacion extends React.Component {
 		this.state = {
 			idLista: this.props.idLista,
 			className: this.props.className,
-			secciones: this.props.secciones
+			secciones: [],
+			tipo: this.props.tipo	// Lateral o Superior
 		}
 	}
 	
+	componentDidMount() {
+		const url = 'http://localhost:8080/navegacion' + this.state.tipo + '.php';
+		
+		fetch(url).then( (response) => {
+			return response.json();
+		}).then( (myJson) => {
+			this.setState({
+				secciones: myJson.secciones
+			});
+		});
+	}
+	
 	render() {
-		const lista = this.state.secciones.map((sec) =>
-				<li className={this.state.className}>{sec}</li>
+		const lista = this.state.secciones.map((sec, index) =>
+				<li className={this.state.className} key={index}>{sec}</li>
 			);
 		
 		return(
